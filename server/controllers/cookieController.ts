@@ -45,7 +45,7 @@ const cookieController = {
     //middleware to validate if the user has a cookie and if that cookie is a valid cookie to login
     sessionValidation(req, res, next) {
         console.log('entered verifySession')
-        if (!req.cookies.SSID) return res.status(200).json({ message: 'failed' });
+        if (!req.cookies.SSID) return res.status(200).json('failed');
 
         console.log('ssid cookie detected, verfifying...')
         const { SSID } = req.cookies;
